@@ -123,19 +123,13 @@ $eleve = $resultat->fetch_assoc();
             ✓ CARTE SCOLAIRE VALIDE
         </div>
 
-        <?php
-         if(!empty($eleve['photo'])): ?>
-          
-            <img
-                src="/cartes_scolaires/ uploads/eleves/<?php 
-                echo htmlspecialchars(basename($eleve['photo'])); ?>"
-                alt="photo de l'eleve"
-                class= "photo"
-            >
-            <?php else: ?>
-                <p>photo non disponible</p>
-
-        <?php endif; ?>
+      <?php if (!empty($eleve['photo'])): ?>
+    <img src="../uploads/eleves/<?= htmlspecialchars($eleve['photo']) ?>" 
+         alt="photo de l'eleve" 
+         style="width:120px; height:120px; object-fit:cover; border-radius:8px;">
+<?php else: ?>
+    <p>Pas de photo</p>
+<?php endif; ?>
 
         <div class="nom">
             <?php echo htmlspecialchars($eleve['nom'] . " " . $eleve['prenom']); ?>

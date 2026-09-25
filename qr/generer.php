@@ -3,6 +3,9 @@
 require_once __DIR__ . "/../vendor/autoload.php";
 require_once __DIR__ . "/../config/connexion.php";
 
+require_once __DIR__ . "/../config/config.php";
+$lien = BASE_URL . "/verification/?token=" . $qr_token;
+
 use Endroid\QrCode\QrCode;
 use Endroid\QrCode\Writer\PngWriter;
 
@@ -29,8 +32,7 @@ if (!$eleve) {
 $token = $eleve['qr_token'];
 
 $url_verification =
-    "http://localhost/cartes_scolaires/verification/?token="
-    . urlencode($token);
+$lien = BASE_URL . "/verification/?token=" . $qr_token;
 
 
 // Dossier de sauvegarde
