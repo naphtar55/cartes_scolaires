@@ -1,0 +1,14 @@
+{
+    "name": "ecole/cartes_scolaires",
+    "description": "Gestion des carte scolaires",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "endroid/qr-code": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "Toi"
+        }
+    ]
+}
